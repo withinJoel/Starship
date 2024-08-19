@@ -27,3 +27,30 @@ Made with 💖 by Joel Jolly.
 15. Prepare Documentation: ✅ (Almost)
 16. Deploy the Application: ❌ (Tried, but had issues deploying it) (Working on it)
 17. Code Review and Feedback: Pending
+
+# Screenshots
+
+
+
+
+
+
+
+![Screenshot from 2024-08-19 17-43-16](https://github.com/user-attachments/assets/fec6ee01-64f9-4e95-bd5f-5a4aae36ebcb)
+
+
+
+
+![Screenshot from 2024-08-19 17-43-34](https://github.com/user-attachments/assets/6da30192-618b-4c89-9ca5-c4081d53374a)
+
+
+
+
+![Screenshot from 2024-08-19 17-45-05](https://github.com/user-attachments/assets/60e1220b-f7da-4a8c-8947-0697e90cf73a)
+
+
+
+
+![Uploading Screenshot from 2024-08-19 17-45-34.png…]()
+
+
