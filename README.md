@@ -30,28 +30,14 @@ Made with 💖 by Joel Jolly.
 
 # Screenshots
 
-
-
-
-
-
-
+* Home Page
 ![Screenshot from 2024-08-19 17-43-16](https://github.com/user-attachments/assets/fec6ee01-64f9-4e95-bd5f-5a4aae36ebcb)
 
-
-
-
+* Login Page
 ![Screenshot from 2024-08-19 17-43-34](https://github.com/user-attachments/assets/6da30192-618b-4c89-9ca5-c4081d53374a)
 
-
-
-
+* Feed Page
 ![Screenshot from 2024-08-19 17-45-05](https://github.com/user-attachments/assets/60e1220b-f7da-4a8c-8947-0697e90cf73a)
 
-
-
-![Screenshot from 2024-08-19 17-45-34](https://github.com/user-attachments/assets/0352083f-5df1-44a2-a96a-2d72f1a30df2)
-
-
-
-
+* About Page
+![Screenshot from 2024-08-19 17-45-34](https://github.com/user-attachments/assets/bae3b683-6589-4912-bcbe-4073ec7ed31c)
