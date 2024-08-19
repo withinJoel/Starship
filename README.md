@@ -42,7 +42,7 @@ Made with 💖 by Joel Jolly.
 * About Page
 ![Screenshot from 2024-08-19 17-45-34](https://github.com/user-attachments/assets/bae3b683-6589-4912-bcbe-4073ec7ed31c)
 
-# Want help use my Java & Springboot basics course (It's free)
+# Want help, Use my Java & Springboot basics course (It's free)
 * https://github.com/withinJoel/TechForDummies
 
 # Support Me
