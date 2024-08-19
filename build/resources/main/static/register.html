@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #1a73e8;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #5f6368;
+        }
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px; /* Adjusted for space before the error message */
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .error-message {
+            width: 100%;
+            padding: 5px;
+            font-size: 14px;
+            color: #721c24;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 20px;
+            margin-bottom: 15px; /* Adjusted for spacing between fields */
+            text-align: left;
+            display: none; /* Initially hidden */
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 20px;
+            background-color: #1a73e8;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #0f5aa0;
+        }
+    </style>
+</head>
+<body>
+<div class="login-container">
+    <h1>Starship</h1>
+    <form id="registerForm" novalidate>
+        <label for="firstname">First name:</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Firstname">
+        <div id="firstname-error" class="error-message"></div>
+
+        <label for="lastname">Last name:</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Lastname">
+        <div id="lastname-error" class="error-message"></div>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email">
+        <div id="email-error" class="error-message"></div>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Password">
+        <div id="password-error" class="error-message"></div>
+
+        <p>By Clicking Register, You agree to our Terms and Conditions.</p>
+        <button type="submit">Register</button>
+    </form>
+    <a href="/login.html" style="display: inline-block; margin-top: 20px;">Already have an account</a>
+</div>
+
+<script>
+    $(document).ready(function() {
+        function validateFirstname() {
+            var firstname = $('#firstname').val();
+            var regex = /^[a-zA-Z]+$/;
+
+            if (firstname.length < 2) {
+                $('#firstname-error').text('First name must be at least 2 characters long.').show();
+                return false;
+            } else if (!regex.test(firstname)) {
+                $('#firstname-error').text('First name cannot contain special characters or numbers.').show();
+                return false;
+            }
+
+            $('#firstname-error').hide();
+            return true;
+        }
+
+        function validateLastname() {
+            var lastname = $('#lastname').val();
+            var regex = /^[a-zA-Z]+$/;
+
+            if (lastname.length < 2) {
+                $('#lastname-error').text('Last name must be at least 2 characters long.').show();
+                return false;
+            } else if (!regex.test(lastname)) {
+                $('#lastname-error').text('Last name cannot contain special characters or numbers.').show();
+                return false;
+            }
+
+            $('#lastname-error').hide();
+            return true;
+        }
+
+        function validateEmail() {
+            var email = $('#email').val();
+            var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!re.test(email)) {
+                $('#email-error').text('Please enter a valid email address.').show();
+                return false;
+            }
+            $('#email-error').hide();
+            return true;
+        }
+
+        function validatePassword() {
+            var password = $('#password').val();
+            if (password.length < 4) {
+                $('#password-error').text('Password must be at least 6 characters long.').show();
+                return false;
+            }
+            $('#password-error').hide();
+            return true;
+        }
+
+        $('#firstname').on('input', validateFirstname);
+        $('#lastname').on('input', validateLastname);
+        $('#email').on('input', validateEmail);
+        $('#password').on('input', validatePassword);
+
+        $('#registerForm').on('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            var firstnameValid = validateFirstname();
+            var lastnameValid = validateLastname();
+            var emailValid = validateEmail();
+            var passwordValid = validatePassword();
+
+            if (firstnameValid && lastnameValid && emailValid && passwordValid) {
+                // Form is valid, proceed with posting data
+                const formData = {
+                    firstname: $('#firstname').val(),
+                    lastname: $('#lastname').val(),
+                    email: $('#email').val(),
+                    password: $('#password').val(),
+                };
+
+                fetch('/registerauth', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                }).then(response => {
+                    if (response.redirected) {
+                        window.location.href = response.url; // Redirect to the new URL
+                    } else {
+                        // Handle non-redirect responses
+                        response.json().then(data => {
+                            console.log('Response:', data);
+                        });
+                    }
+                }).catch(error => {
+                    console.error('Error:', error);
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>

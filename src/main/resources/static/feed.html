@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .feed-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            width: 600px;
+            text-align: left;
+        }
+        h1 {
+            color: #1a73e8;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #5f6368;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="feed-container">
+    <h1>Feed</h1>
+    <div>
+        <a style = "padding-right: 5px;" href="login.html">Logout</a>
+        <a style = "padding-right: 5px;" href="about.html">About</a>
+    </div>
+    <br>
+    <p id="welcome"></p>
+    <p>What is Starship?</p>
+    <p>Future of HTML</p>
+    <p>Will Ruby take over the world of programming?</p>
+    <p>Can Python be future?</p>
+    <p>Will HTML 4 ever come?</p>
+    <p>Why is python too slow?</p>
+    <p>Are your cookies exposed?</p>
+    <p>Will the A.I bubble explode?</p>
+</div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the message parameter from the URL
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const username = urlParams.get('email');
+
+        // Display the message in the error page
+        const errorMessageElement = document.getElementById('welcome');
+        errorMessageElement.textContent = 'Welcome ' +username.charAt(0).toUpperCase() +username.slice(1).toLowerCase()+ ',' || 'Unknown error occurred.';
+    });
+</script>
+</html>

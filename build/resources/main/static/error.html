@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .error-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            width: 400px;
+            text-align: center;
+        }
+        h1 {
+            color: #d32f2f;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #616161;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="error-container">
+    <h1>Error</h1>
+    <p id="message"></p>
+    <a href="login.html">Try again</a>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the message parameter from the URL
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const message = urlParams.get('message');
+
+        // Get the message element
+        const errorMessageElement = document.getElementById('message');
+
+        // Check if there is a message and display it
+        if (message) {
+            errorMessageElement.textContent = message;
+            errorMessageElement.hidden = false; // Make the element visible
+        } else {
+            errorMessageElement.textContent = "Oops, Our Starship landed in the wrong planet!"; // Hide the element if there's no message
+        }
+    });
+</script>
+</body>
+</html>
