@@ -50,7 +50,8 @@ Made with 💖 by Joel Jolly.
 
 
 
+![Screenshot from 2024-08-19 17-45-34](https://github.com/user-attachments/assets/0352083f-5df1-44a2-a96a-2d72f1a30df2)
 
-![Uploading Screenshot from 2024-08-19 17-45-34.png…]()
+
 
 
