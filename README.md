@@ -41,3 +41,13 @@ Made with 💖 by Joel Jolly.
 
 * About Page
 ![Screenshot from 2024-08-19 17-45-34](https://github.com/user-attachments/assets/bae3b683-6589-4912-bcbe-4073ec7ed31c)
+
+# Want help use my Java & Springboot basics course (It's free)
+* https://github.com/withinJoel/TechForDummies
+
+# Support Me
+If you love TeamSync and want to keep me caffeinated for more awesome updates, consider buying me a coffee!
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Donate-orange?style=for-the-badge&logo=buy-me-a-coffee)](https://www.buymeacoffee.com/withinjoel)
+
+Made with 💖 by Joel Jolly.
