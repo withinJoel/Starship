@@ -38,6 +38,21 @@ Made with 💖 by Joel Jolly.
 * About Page
 ![Screenshot from 2024-08-19 17-45-34](https://github.com/user-attachments/assets/bae3b683-6589-4912-bcbe-4073ec7ed31c)
 
+# To get started
+* Create a database
+```CREATE DATABASE teamsync;```
+* Enter inside the database
+```USE teamsync_db;```
+* Create a table called `user_details`
+```
+CREATE TABLE user_details (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    firstname VARCHAR(50) NOT NULL,
+    lastname VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+```
 # Want help, Use my Java & Springboot basics course (It's free)
 * https://github.com/withinJoel/TechForDummies
 
