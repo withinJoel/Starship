@@ -40,9 +40,15 @@ Made with 💖 by Joel Jolly.
 
 # To get started
 * Create a database
-```CREATE DATABASE teamsync;```
+
+```
+CREATE DATABASE teamsync;
+```
 * Enter inside the database
-```USE teamsync_db;```
+
+```
+USE teamsync_db;
+```
 * Create a table called `user_details`
 ```
 CREATE TABLE user_details (
