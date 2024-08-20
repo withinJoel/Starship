@@ -2,7 +2,7 @@
 Made with 💖 by Joel Jolly.
 
 # About
-*
+* A simple login/register application using Java & Springboot.
 
 # Project Current Progress
 1. Install Required Tools: ✅
