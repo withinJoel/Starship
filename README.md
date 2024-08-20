@@ -59,6 +59,25 @@ CREATE TABLE user_details (
     password VARCHAR(255) NOT NULL
 );
 ```
+* Update the `application.properties`
+```
+spring.application.name=starship
+spring.datasource.url=jdbc:mysql://localhost:3306/users
+
+//Starship port
+server.port=8083
+server.servlet.context-path=/starship
+
+spring.datasource.username=root
+spring.datasource.password=test123!
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
+spring.jpa.hibernate.ddl-auto=update
+```
+* Paste the repo code inside the intellij project folder. (Before doing this create a new project using intellij and then close the intellij app and then paste the code from this repo)
+* Run the `build.gradle` (To install the packages)
+* Run the code.
+
 # Want help, Use my Java & Springboot basics course (It's free)
 * https://github.com/withinJoel/TechForDummies
 
