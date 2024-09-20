@@ -4,6 +4,9 @@ Made with 💖 by Joel Jolly.
 # About
 * This Java Spring Boot application facilitates user registration and login processes. It prioritizes user data security with password hashing and validation. The intuitive interface streamlines account creation and login, while informative error messages guide users through potential issues.
 
+# Star History
+[![Star History Chart](https://api.star-history.com/svg?repos=withinjoel/starship&type=Timeline)](https://star-history.com/#withinjoel/starship&Timeline)
+
 # Project Current Progress
 1. Install Required Tools: ✅
    * Java ✅
